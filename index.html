@@ -6,8 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Plant Object weight</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     </head>
     <body>
+        <h1>Calculate a weight of an object on a planet</h1>
+        <form>
+            <input type="text" name="mass" id="mass" placeholder="Mass in Kilogram">
+            <select name="planet" id="planet">
+                <option value="">--select planet--</option>
+                <option value="earth">earth</option>
+                <option value="mars">mars</option>
+                <option value="mercury">mercury</option>
+                <option value="venus">venus</option>
+                <option value="neptune">neptune</option>
+                <option value="jupiter">jupiter</option>
+                <option value="uranus">uranus</option>
+                <option value="saturn">saturn</option>
+            </select>
+            <button>Calculate weight</button>
+        </form>
         <script src="script.js"></script>
     </body>
 </html>
