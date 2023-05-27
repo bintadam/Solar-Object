@@ -50,6 +50,12 @@ form input{
     margin-right: 1rem;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 form select{
     background-color: #fefefe;
     letter-spacing: 0.5px;

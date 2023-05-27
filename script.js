@@ -8,47 +8,49 @@ const uranusGravity = 8.87
 const mercuryGravity = 3.7
 
 const img = document.querySelector(".img")
-const mass = document.querySelector('#mass')
+const mass = document.getElementById('mass')
 const btn = document.querySelector('.btn')
+const noMass = document.querySelector("no-mass")
+const noPlanet =  document.querySelector(".no-planet")
 
-const noMass = "No Mass"
-const noPlanet = "You did not select any Planet"
+const planet = document.getElementById("planet")
+const value = planet.value;
+const text = planet.options[planet.selectedIndex].text
 
-
+let weight = 0;
 btn.addEventListener('click', function(e){
     e.preventDefault()
     if(mass == ""){
-        noMass
-    }
-    let weight = 0;
-    for(let planet of document.querySelector('#planet').options){
-        if(planet.value == "earth"){
-            weight = Number(mass) * earthGravity;
-            img.src = "images/earth.png";
-        } else if(planet.value == "jupiter"){
-            weight = Number(mass) * jupiterGravity;
-            img.src = "images/jupiter.png";
-        } else if(planet.value == "neptune"){
-            weight = Number(mass) * neptuneGravity;
-            img.src = "images/neptune.png";
-        } else if(planet.value == "saturn"){
-            weight = Number(mass) * saturnGravity;
-            img.src = "images/saturn.png";
-        } else if(planet.value == "mercury"){
-            weight = Number(mass) * mercuryGravity;
-            img.src = "images/mercury.png";
-        } else if (planet.value == "mars"){
-            weight = Number(mass) * marsGravity;
-            img.src = "images/mars.png";
-        } else if(planet.value == "venus"){
-            weight = Number(mass) * venusGravity;
-            img.src = "images/venus.png";
-        } else if(planet.value == "uranus"){
-            weight = Number(mass) * uranusGravity
-            img.src = "images/uranus.png"; 
-        } else{
-            noPlanet
-        }
+        noMass.textContent  = "No Mass"
+    }  
+    if(planet.value == "earth"){
+        weight = mass * earthGravity;
+        img.src = "images/earth.png";
         return weight
+    } else if(planet.value == "jupiter"){
+        weight = mass * jupiterGravity;
+        img.src = "images/jupiter.png";
+        return weight
+    } else if(planet.value == "neptune"){
+        weight = mass * neptuneGravity;
+        img.src = "images/neptune.png";
+    } else if(planet.value == "saturn"){
+        weight = mass * saturnGravity;
+        img.src = "images/saturn.png";
+    } else if(planet.value == "mercury"){
+        weight = mass * mercuryGravity;
+        img.src = "images/mercury.png";
+    } else if (planet.value == "mars"){
+        weight = mass * marsGravity;
+        img.src = "images/mars.png";
+    } else if(planet.value == "venus"){
+        weight = mass * venusGravity;
+        img.src = "images/venus.png";
+    } else if(planet.value == "uranus"){
+        weight = mass * uranusGravity
+        img.src = "images/uranus.png"; 
+    } else{
+        noPlanet.textContent = "You did not select any Planet"
     }
+    return weight      
 })
