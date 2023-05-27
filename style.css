@@ -10,9 +10,86 @@ html{
 }
 
 body{
- font-family:  'Poppins', sans-serif;
- background-image: url("images/bg.jpeg");
- background-repeat: no-repeat;
- background-size: cover;
- background-attachment: fixed;
+    font-family:  'Poppins', sans-serif;
+    background-image: url("images/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 3rem;
+    color: #ffff;
+}
+
+h1{
+    text-align: center;
+    color: inherit;
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+form {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    justify-content: center;
+    font-family: inherit;
+    padding: 0.7rem;
+    justify-content: space-between;
+}
+
+form input{
+    background-color: #fefefe;
+    padding: 0.75rem;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+form select{
+    background-color: #fefefe;
+    letter-spacing: 0.5px;
+    max-height: calc(1.2em + 15px);
+    height: calc(1.2em + 15px);
+    color: #666;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+button{
+    margin-top: 2rem;
+    color: inherit;
+    background-color: rgba(255,255,255,0.4);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 0.2rem;
+    border: #fff;
+    cursor: pointer;
+}
+
+.card{
+    position: absolute;
+    left: 18%;
+    top: 20%;
+    background-color: rgba(255,255,255,0.1);
+    height: 70%;
+    width: 65%;
+    border-radius: 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10%);
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
 }
