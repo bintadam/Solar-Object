@@ -87,19 +87,30 @@ form select{
 
 .card{
     position: absolute;
-    left: 18%;
+    left: 15%;
     top: 20%;
     background-color: rgba(255,255,255,0.1);
-    height: 70%;
-    width: 65%;
+    height: 75%;
+    width: 70%;
     border-radius: 0.6rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10%);
 }
 
+.card-1{
+    display: flex;
+    justify-content: flex-start;
+}
+
 img{
+    padding-top: 4rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 5rem;
+    border-radius: 40rem;
+}
+
+no-mass{
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
 }

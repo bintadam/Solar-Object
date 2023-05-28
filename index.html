@@ -15,7 +15,7 @@
         <form>
             <input type="number" name="mass" id="mass" placeholder="Mass in Kilogram">
             <select name="planet" id="planet">
-                <option value="1">--select planet--</option>
+                <option value="">--select planet--</option>
                 <option value="earth">earth</option>
                 <option value="mars">mars</option>
                 <option value="mercury">mercury</option>
@@ -27,8 +27,10 @@
             </select>
             <button class="btn">Calculate weight</button>
         </form>
-        <p class="no-planet"></p>
-        <p class="no-mass"></p>
+        <div hidden="hidden">
+            <p>Mass required</p>
+            <p>You did not select a Planet yet</p>
+        </div>
         <div class="card">
             <img class="img" src="images/earth.png" alt="">
         </div>
