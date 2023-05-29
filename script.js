@@ -3,16 +3,14 @@ const noMass = document.querySelector(".no-mass");
 const noPlanet =  document.querySelector(".no-planet");
 const card =  document.querySelector(".card");
 const object = document.querySelector(".object")
+const img = document.querySelector(".img");
 
 
-let weight;
 
 function calculate(){
+
     const planet = document.getElementById("planet").value;
     const mass = Number(document.getElementById('mass').value);
-    const img = document.querySelector(".img");
-    console.log(mass)
-    console.log(typeof mass)
 
     let earthGravity =  9.807
     let jupiterGravity = 24.79
@@ -22,32 +20,31 @@ function calculate(){
     let neptuneGravity = 11.15
     let uranusGravity = 8.87
     let mercuryGravity = 3.7
-        
+
     if(!mass){
         img.style.display = "none"
         noMass.textContent = "Mass is Required";
-        object.textContent = ""
+        object.style.display = "none"
     } 
 
     switch(planet){
         case "Earth":
-            weight = mass * earthGravity;
+            weight = Math.trunc(mass * earthGravity);
             img.src = "images/earth.png";
-            console.log(weight)
             break;
 
         case "Jupiter":
-            weight = mass * jupiterGravity;
+            weight = Math.trunc(mass * jupiterGravity);
             img.src = "images/jupiter.png";
             break;
 
         case "Neptune":
-            weight = mass * neptuneGravity;
+            weight = Math.trunc(mass * neptuneGravity);
             img.src = "images/neptune.png";
             break;
 
         case "Saturn":
-            weight = mass * saturnGravity;
+            weight = Math.trunc(mass * saturnGravity);
             img.src = "images/saturn.png";
             break;
 
@@ -57,27 +54,28 @@ function calculate(){
             break;
 
         case "Mars":
-            weight = mass * marsGravity;
+            weight =Math.trunc(mass * marsGravity);
             img.src = "images/mars.png";
             break;
 
-        case "Menus":
-            weight = mass * venusGravity;
+        case "Venus":
+            weight = Math.trunc(mass * venusGravity);
+            console.log(weight)
             img.src = "images/venus.png";
             break;
 
         case "Uranus":
-            weight = mass * uranusGravity;
+            weight = Math.trunc(mass * uranusGravity);
             img.src = "images/uranus.png"; 
             break;
-            
+
         default :
             noMass.textContent = "You did not choose a planet yet";
             img.style.display = "none"
-            object.textContent = ""
+            object.style.display = "none"
     }
 
-
+    return  object.textContent = `The weight of the object on ${planet}\n${weight}.00N`
 }
 
 btn.addEventListener("click", function(e){
