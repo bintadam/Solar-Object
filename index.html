@@ -13,26 +13,24 @@
     <body>
         <h1>Calculate The Weight Of An object On A Planet</h1>
         <form>
-            <input type="number" name="mass" id="mass" placeholder="Mass in Kilogram">
-            <select name="planet" id="planet">
+            <input type="number" min=1  value="" id="mass" placeholder="Mass in Kilogram">
+            <select name="planet" id="planet" onclick="handleChange(this)">
                 <option value="">--select planet--</option>
-                <option value="earth">earth</option>
-                <option value="mars">mars</option>
-                <option value="mercury">mercury</option>
-                <option value="venus">venus</option>
-                <option value="neptune">neptune</option>
-                <option value="jupiter">jupiter</option>
-                <option value="uranus">uranus</option>
-                <option value="saturn">saturn</option>
+                <option value="Earth">Earth</option>
+                <option value="Mars">Mars</option>
+                <option value="Mercury">Mercury</option>
+                <option value="Venus">Venus</option>
+                <option value="Neptune">Neptune</option>
+                <option value="Jupiter">Jupiter</option>
+                <option value="Uranus">Uranus</option>
+                <option value="Saturn">Saturn</option>
             </select>
             <button class="btn">Calculate weight</button>
         </form>
-        <div hidden="hidden">
-            <p>Mass required</p>
-            <p>You did not select a Planet yet</p>
-        </div>
+        <p class="no-mass"></p>
         <div class="card">
             <img class="img" src="images/earth.png" alt="">
+            <p class="object"></p>
         </div>
         <script src="script.js"></script>
     </body>

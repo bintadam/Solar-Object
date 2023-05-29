@@ -97,11 +97,6 @@ form select{
     backdrop-filter: blur(10%);
 }
 
-.card-1{
-    display: flex;
-    justify-content: flex-start;
-}
-
 img{
     padding-top: 4rem;
     display: block;
@@ -111,6 +106,8 @@ img{
 }
 
 no-mass{
+    position: absolute;
+    left: 50%;
     text-align: center;
     background: rgba(255, 255, 255, 0.3);
 }
