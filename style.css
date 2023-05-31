@@ -41,7 +41,7 @@ form {
 
 form input{
     background-color: #fefefe;
-    padding: 0.75rem;
+    padding: 1.18rem;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -59,8 +59,8 @@ input::-webkit-inner-spin-button {
 form select{
     background-color: #fefefe;
     letter-spacing: 0.5px;
-    max-height: calc(1.2em + 15px);
-    height: calc(1.2em + 15px);
+    max-height: calc(1.8em + 15px);
+    height: calc(1.8em + 15px);
     color: #666;
     outline: none;
     border: none;
@@ -71,8 +71,8 @@ form select{
 .btn{
     margin-top: 2rem;
     color: inherit;
-    background-color: rgba(255,255,255,0.4);
-    padding: 1rem;
+    background-color: rgba(255,255,255,0.3);
+    padding: 1.3rem;
     border-radius: 1rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -87,29 +87,98 @@ form select{
 
 .card{
     position: absolute;
-    left: 15%;
+    left: 19%;
     top: 20%;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255,255,255,0.12);
     height: 75%;
-    width: 70%;
-    border-radius: 0.6rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 67%;
+    border-radius: 0.2rem;
+    border: none;
     backdrop-filter: blur(10%);
 }
 
 img{
-    padding-top: 4rem;
+    padding-top: 8rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 40rem;
 }
 
-no-mass{
+.no-mass{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 15rem;
-    text-align: center;
+    left: 33%;
+    top: 26%;
+    font-size: 1.8rem;
+    font-weight: 400;
     background: rgba(255, 255, 255, 0.3);
+    padding: 1rem 10rem;
+}
+
+.object{
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    left: 52%;
+    top: 44%;
+    padding: 4rem 5rem;
+}
+
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 1.5rem;
+    }
+
+    form {
+        width: 100%;
+        padding: 2%;
+        margin: 0 auto;
+    }
+
+    form input{
+        padding: 1rem;
+        display: inline-block;
+        width: 35%;
+        letter-spacing: 0.5px;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+
+    form select{
+        max-height: calc(1.2em + 20px);
+        height: calc(1.2em + 20px);
+        font-size: 1rem;
+        margin-right: 1rem;
+        display: inline-block;
+        width: 35%;
+    }
+
+    .img{
+        padding-top: 12rem;
+        height: 50rem;
+    }
+
+    .card{
+        position: absolute;
+        left: 5%;
+        top: 20%;
+        background-color: rgba(255,255,255,0.12);
+        height: 75%;
+        width: 90%;
+        border-radius: 0.2rem;
+        border: none;
+        backdrop-filter: blur(10%);
+    }
+
+    .no-mass, .object{
+        position: absolute;
+        left: 10%;
+        top: 24%;
+        font-size: 1.5rem;
+        font-weight: 400;
+        background: rgba(255, 255, 255, 0.3);
+        padding: 1rem 7rem;
+    }
 }
